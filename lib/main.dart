@@ -1,5 +1,7 @@
+import 'package:booking_app/bookingowner/place_detail.dart';
 import 'package:booking_app/pages/bottomnav.dart';
 import 'package:booking_app/pages/login.dart';
+import 'package:booking_app/pages/signup.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home:Login()
+      home:PlaceDetail()
     );
   }
 } 
