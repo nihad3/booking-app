@@ -23,8 +23,8 @@ String email = "", password = "", name = "";
   userLogin()async {
     try{
       await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: email!,
-         password: password!,);
+        email: email,
+         password: password,);
 
          Navigator.push(context, MaterialPageRoute(builder: (context)=> Bottomnav()));
     } on FirebaseAuthException catch (e){

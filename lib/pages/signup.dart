@@ -22,8 +22,7 @@ class _SignupState extends State<Signup> {
   TextEditingController mailcontroller = new TextEditingController();
  
  registration() async {
-  if (password != null &&
-      namecontroller.text !="" &&
+  if (namecontroller.text !="" &&
       mailcontroller.text !=""){
         try {
           UserCredential userCredential = await FirebaseAuth.instance.
@@ -31,7 +30,7 @@ class _SignupState extends State<Signup> {
           String id = randomAlphaNumeric(10);
           Map<String, dynamic> userInfoMap={
             "Name":namecontroller.text,
-            "Email":namecontroller.text,
+            "Email":mailcontroller.text,
             "Id": id,
             
           };
