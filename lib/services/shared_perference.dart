@@ -1,10 +1,11 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreferenceHelper {
-  static const String userIdKey = "USERKEY";
-  static const String userNameKey = "USERNAMEKEY";
-  static const String userEmailKey = "USEREMAILKEY";
-  static const String userImageKey = "USERIMAGEKEY";
+  static String userIdKey = "USERKEY";
+  static String userNameKey = "USERNAMEKEY";
+  static String userEmailKey = "USEREMAILKEY";
+  static String userImageKey = "USERIMAGEKEY";
+ 
 
   // -------------------------
   // 🔹 MÉTHODES DE SAUVEGARDE

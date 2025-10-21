@@ -7,4 +7,11 @@ class DatabaseMethods {
     .doc(id)
     .set(userInfoMap);
   }
+  
+  Future addPlaceInfo(Map<String, dynamic> placeInfoMap, String id)async{
+    return await FirebaseFirestore.instance
+    .collection("Place")
+    .doc(id)
+    .set(placeInfoMap);
+  }
 }
