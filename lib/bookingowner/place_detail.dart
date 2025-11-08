@@ -266,7 +266,17 @@ class _PlaceDetailState extends State<PlaceDetail> {
                   String addId= randomAlphaNumeric(10);
 
                   Reference firebaseStorageRef = FirebaseStorage.instance.ref().child("blogImage").child(addId);
-                  final UploadTask task = firebaseStorageRef.putFile(selectedImage!);
+                  // final UploadTask task = firebaseStorageRef.putFile(selectedImage!);
+//                   if (selectedImage == null) {
+//   // Skip upload or show a warning (depending on what you want)
+//   print("⚠️ No image selected — skipping upload for now.");
+  
+//   // You can still continue your registration or save text data here.
+//   return; 
+// }
+
+final UploadTask task = firebaseStorageRef.putFile(selectedImage!);
+
                   var downloadUrl = await(await task).ref.getDownloadURL();
 
                   Map<String, dynamic> addPlace ={
